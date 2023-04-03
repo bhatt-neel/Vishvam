@@ -9,171 +9,209 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            justify-content: center;
             background-color: rgb(250, 251, 253);
+            font-family: 'Poppins', sans-serif;
             box-sizing: border-box;
         }
 
-        .sign {
-
-            width: 36em;
-            height: 36em;
-            align-items: center;
-            justify-content: center;
+        .myportfolio {
             position: absolute;
-            left: 55rem;
-            top: 4.5em;
+            left: 2.19%;
+            right: 90.73%;
+            top: 5.09%;
+            bottom: 91.94%;
+            /* background: #01A29A; */
+            /* border: 0.4px solid #01A29A; */
+        }
+
+        .background {
+            width: 37.875rem;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            left: 5.625rem;
+            top: 0.125rem;
+        }
+
+        .container {
+            width: 34em;
+            height: 28em;
+            color: #2f3873;
+            margin-top: 8.125rem;
+            background-color: rgb(250, 251, 253);
+            position: absolute;
+            left: 49rem;
+        }
+
+        .title {
+            gap: 0.9375rem;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sign {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 3rem;
+            line-height: 3.75rem;
+            text-transform: capitalize;
+            color: #101828;
+        }
+
+        .email {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 1.875rem;
+            color: #667085;
+            width: 512px;
+            height: 30px;
+            text-transform: capitalize;
+        }
+
+        .email a {
+            color: #6941C6;
+            text-transform: none;
         }
 
         .inputs {
             display: flex;
             flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
+            text-transform: capitalize;
         }
 
-        label {
-            font-size: 0.875rem;
-            font-weight: 500px;
-        }
-
-        input {
-            margin-left: 3rem;
+        .inputs input {
+            border: 0.0625rem solid #D0D5DD;
             background: #FFFFFF;
-            border: 0.063rem solid #D0D5DD;
-            box-shadow: 0px 0.063rem 0.125rem rgba(16, 24, 40, 0.05);
-            border-radius: 0.5rem;
-            height: 3em;
+            border-radius: 0.25rem;
             width: 32rem;
-            padding: 0.4rem;
+            height: 2.2rem;
+        }
+
+        .inputs label {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            text-transform: capitalize;
         }
 
         ::placeholder {
-            font-size: 1rem;
+            font-family: 'Inter';
+            font-style: normal;
             font-weight: 400;
-            color: #667085;
+            font-size: 1rem;
+            line-height: 1.5rem;
             opacity: 1;
-            width: 30rem;
+            color: #667085;
             /* Firefox */
         }
 
         :-ms-input-placeholder {
             /* Internet Explorer 10-11 */
-            font-size: 1rem;
+            font-family: 'Inter';
+            font-style: normal;
             font-weight: 400;
-            color: #667085;
-            width: 30rem;
+            font-size: 1rem;
             line-height: 1.5rem;
+            color: #667085;
+
         }
 
         ::-ms-input-placeholder {
             /* Microsoft Edge */
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
             font-size: 1rem;
-            font-weight: 400;
+            line-height: 1.5rem;
             color: #667085;
-            width: 30rem;
-            line-height: 1.5rem;
-        }
-
-        label {
-            margin-left: 3rem;
-            line-height: 1.25rem;
-            color: #344054;
-            line-height: 1.5rem;
-        }
-
-        .container {
-            justify-content: right;
 
         }
 
-        .container .h1 {
-            text-align: center;
-            font-size: 3rem;
-            font-weight: 600;
-            line-height: 3.75rem;
-
-        }
-
-        .container p {
-            text-align: center;
-            font-size: 1.25rem;
-            font-weight: 400;
-            line-height: 1.875rem;
-        }
-
-        #check {
-            width: 25.563em;
-            height: 1.3em;
-            align-items: baseline;
-        }
-
-        .check-text {
-            /* position: relative; */
-            font-weight: 400;
-            bottom: 2.7rem;
-            font-size: 1.125rem;
-            left: 5rem;
-        }
-
-        .btn {
-            background: #7F56D9;
-            border: 1px solid #7F56D9;
-            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-            border-radius: 0.5rem;
-            color: white;
-            font-size: 1.5rem;
+        #checkbox {
+            width: 1.1rem;
             position: relative;
-            bottom: 1em;
-            left: 0.4rem;
-            width: 19.5em;
-            height: 2.3em;
+            top: 0.6875rem;
+            margin-right: 0.625rem;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.125rem;
+            line-height: 1.6875rem;
+
         }
 
-        a {
-            align-items: center;
-            align-content: center;
+        .check a {
+            color: rgba(48, 57, 114, 1);
+            font-weight: 400;
+        }
+
+        .check {
+            color: #000000;
+            font-weight: 400;
+        }
+
+        .inputs .btn {
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: #FFFFFF;
+            background: #7F56D9;
+            border: 0.0625rem solid #7F56D9;
+            box-shadow: 0rem 0.0625rem 0.125rem rgba(16, 24, 40, 0.05);
+            border-radius: 0.5rem;
+            width: 32rem;
+            height: 3rem;
+            margin-top: 0.625rem;
+            text-transform: capitalize;
         }
     </style>
 </head>
 
 <body>
-    <div class="sign">
-        <form action="post">
-            <div class="container">
-                <p class="h1">Sign up in my portfolio</p>
-                <p>
+    <div class="img">
+        <img src="/static/website img/background.png" alt="" class="background">
+        <img src="/static/website img/My Portfolio.png" alt="" class="myportfolio">
+    </div>
+    <div class="container">
+        <form action="" method="post">
 
-                    You can reach us anytime via <a href="mailto:hi@myportfolio.com">
-                        hi@myportfolio.com </a>
+            <div class="title">
+                <p class="sign">sign up to my portfolio</p>
+                <p class="email">you can reach us anytime via <a href="mailto:hi@myportfolio.com">hi@myportfolio.com</a>
                 </p>
-
-                <br>
-                <div class="inputs">
-                    <label for="">Name</label>
-                    <input type="text" id="Name" placeholder="  Your Name"> <br>
-                    <label for="Email" id="Email">Email</label>
-
-                    <input type="text" name="Email" placeholder="  you@company.com">
-                    <br>
-                    <label for="Password">Password</label>
-
-                    <input type="Password" name="Password" id="" placeholder="  Password">
-                    <br>
-                </div>
-
-                <input type="checkbox" name="" id="check">
-                <p class="check-text"> Don't have an account? <a href=""> Get started for
-                        free</a></p>
-
-                <input type="button" class="btn" value="Get Started">
-                <!-- <br><br><br> -->
-                <!-- <hr style="width: 80%;"> -->
-
-
             </div>
+            <div class="inputs">
+                <label for="">name</label>
+                <input type="text" id="name" placeholder="  your name">
+                <label for="">email</label>
+                <input type="email" id="email" placeholder="  you@company.com">
+                <label for="">password</label>
+                <input type="password" id="password" placeholder="  password">
+                <div class="check">
+
+                    <input type="checkbox" name="" id="checkbox">Already Have An Account? <a href=""> Login Here for
+                        free.</a>
+                </div>
+                <input type="button" class="btn" value="get started">
+            </div>
+
         </form>
     </div>
+
 </body>
 
 </html>
